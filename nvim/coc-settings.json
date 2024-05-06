@@ -1,10 +1,10 @@
 {
   "python.jediEnabled": true,
-  "python.pythonPath": "~/.conda_coc",
+  "python.pythonPath": "~/.get_venv",
   "python.linting.flake8Enabled": true,
   "python.linting.mypyEnabled": true,
   "python.formatting.provider": "black",
-  "python.formatting.blackPath": "/Users/chris/.local/bin/black",
+  "python.formatting.blackPath": "/Users/bin/black",
   "coc.preferences.formatOnSaveFiletypes": ["python"],
   "languageserver": {
     "ccls": {

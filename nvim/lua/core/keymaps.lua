@@ -7,6 +7,8 @@ vim.opt.laststatus = 2
 vim.opt.autowrite = true
 vim.opt.cursorline = true
 vim.opt.autoread = true
+vim.opt.number = true
+vim.opt.relativenumber = true
 
 -- use spaces for tabs, etc.
 vim.opt.tabstop = 2
