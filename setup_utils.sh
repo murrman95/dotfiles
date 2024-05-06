@@ -1,24 +1,32 @@
 #!/bin/bash
 
-
+# TODO: Have a mac build
 unameOut="$(uname -s)"
 case "${unameOut}" in
     Linux*)     machine=Linux;;
     Darwin*)    machine=Mac;;
-    CYGWIN*)    machine=Cygwin;;
-    MINGW*)     machine=MinGw;;
-    MSYS_NT*)   machine=Git;;
-    *)          machine="UNKNOWN:${unameOut}"
+    *)          machine="UNKNOWN:${unameOut}" 
 esac
 echo "Machine type is ${machine}"
 
-os=$(cat /etc/os-release | grep -o -m 1 "Ubuntu")
+if [ "$machine" == "Mac" ]; then
+  echo "Mac setup not supported yet."
+  exit
+fi
 
+os=$(cat /etc/os-release | grep -o -m 1 "Ubuntu") # m 1 just to get first match and stop
+
+# TODO: have setups for other Linux systems
 if [ "$os" == "Ubuntu" ]; then
   echo "Ubuntu detected. Completing setup"
 
   sudo apt-get update
   yes | sudo apt-get install build-essential
+
+  # get latest node 
+  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+  nvm install node
+
   # fzf setup
   git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
   cd ~/.fzf/
