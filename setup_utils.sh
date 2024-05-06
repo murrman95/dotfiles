@@ -41,6 +41,11 @@ if [ "$os" == "Ubuntu" ]; then
   # tmux setup
   sudo apt install tmux
 
+  # python
+  sudo add-apt-repository ppa:deadsnakes/ppa
+  sudo apt update
+  sudo apt-get install python3.10 python3.10-dev python3.10-venv
+
   source ~/.bashrc
 else
   echo "Not Ubuntu detected. os is $os"
