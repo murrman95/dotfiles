@@ -1,3 +1,3 @@
 #!/bin/bash
-ln -s nvim ~/.config/nvim
-ln -s .tmux.conf ~/.tmux.conf
+ln -sr nvim "$HOME/.config/nvim"
+ln -sr .tmux.conf "$HOME/.tmux.conf"

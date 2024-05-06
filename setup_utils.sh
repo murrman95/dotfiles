@@ -16,6 +16,9 @@ os=$(cat /etc/os-release | grep -o -m 1 "Ubuntu")
 
 if [ "$os" == "Ubuntu" ]; then
   echo "Ubuntu detected. Completing setup"
+
+  sudo apt-get update
+  yes | sudo apt-get install build-essential
   # fzf setup
   git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
   cd ~/.fzf/
