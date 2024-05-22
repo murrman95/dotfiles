@@ -33,7 +33,7 @@ if [ "$os" == "Ubuntu" ]; then
   yes | ./install
 
   # neovim setup
-  sudo snap install nvim
+  sudo snap install nvim --classic
 
   echo 'alias vim=nvim' >> ~/.bashrc
   echo 'alias v=vim' >> ~/.bashrc
