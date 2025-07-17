@@ -10,6 +10,10 @@ vim.opt.autoread = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 
+-- yank to system clipboard
+vim.api.nvim_set_option("clipboard","unnamed")
+
+
 -- use spaces for tabs, etc.
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2

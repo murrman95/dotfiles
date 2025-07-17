@@ -18,7 +18,6 @@ local plugins = {
   'nvim-tree/nvim-tree.lua',
   'nvim-tree/nvim-web-devicons',
   'nvim-lualine/lualine.nvim',
-  'nvim-treesitter/nvim-treesitter',
   'nvim-lua/plenary.nvim',
   {'catppuccin/nvim', as = 'catppuccin' },
   {'neoclide/coc.nvim', branch = 'release'},
@@ -34,3 +33,4 @@ require("lazy").setup(plugins, opts)
 
 require("core.keymaps")
 require("core.plugin_config")
+-- require("core.lsp")

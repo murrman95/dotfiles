@@ -1,11 +1,7 @@
 {
-  "python.jediEnabled": true,
+  "python.jediEnabled": false,
   "python.pythonPath": "~/.get_venv",
-  "python.linting.flake8Enabled": true,
-  "python.linting.mypyEnabled": true,
-  "python.formatting.provider": "black",
-  "python.formatting.blackPath": "/Users/bin/black",
-  "coc.preferences.formatOnSaveFiletypes": ["python"],
+  "python.formatting.provider": "none",
   "languageserver": {
     "ccls": {
       "command": "ccls",
